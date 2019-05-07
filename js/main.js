@@ -74,13 +74,12 @@ const flipCard = function() {
 
 
 const createBoard = () => {
-  const cardTable = document.getElementById("game-board")
-  for (var i = 0; i < cardsArray.length; i++) {
+  for (i = 0; i < cardsArray.length; i++) {
     const cardElement = document.createElement('img');
     cardElement.setAttribute('src', 'https://i.ibb.co/886JHQ0/back.png');
     cardElement.setAttribute('data-id',i);
     cardElement.addEventListener('click', flipCard);
-cardTable.appendChild(cardElement);
+document.getElementById("game-board").appendChild(cardElement);
 }
 };
 
